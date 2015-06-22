@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Admin</title>
+
+		<link href="css/main.css" rel="stylesheet" /></li>
+		<link href="css/bootstrap.min.css" rel="stylesheet" /></li>
+		<script src="js/respond.js"></script>
+	
+
+	</head>
+
+	<body>
+
+		<!-- header -->
+		<div class ="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a href="#" class="navbar-brand">ISP Hostel Booking App</a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+
+					<ul class = "nav navbar-nav navbar-right">
+						<li><a href="{{ url }}"> {{ url_linktext }} </a> {{user.nickname}}</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- end --> 		
+		
+		
+		{% if user %}
+		<div class="rows">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<!--Content-->
+				<table class="table table-bordered">
+				    <thead>
+				        <tr>
+
+				            <th>Name</th>
+				            <th>Admission Number</th>
+				            <th>Email</th>
+				            <th>Course</th>
+				            <th>Application Date</th>
+				            <th>Allocate Room</th>
+				        </tr>
+				    </thead>
+				    {% for row in rows %}
+				    <tbody>
+
+				        <tr>
+				        	
+				            <td>{{row.name}}</td>
+				            <td>{{row.adm_no}}</td>
+				            <td>{{row.email}}</td>
+				            <td>{{row.course}}</td>
+				            <td>{{row.date}}</td>
+				            <td>
+				            	<!-- Update room info form -->
+				            	<form class="form-inline" role="form">
+									  <div class="form-group">
+									    <label class="sr-only" for="">Room </label>
+									    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="">
+									  </div>
+									<button type="submit" class="btn btn-default">Save & Send Email</button>
+								</form>
+				            </td>
+
+				            {% endfor%}
+
+				        </tr>
+				        </tbody>
+						</table>
+			
+
+			
+
+			
+
+
+					
+			<!-- content-->
+			</div>
+			</div>
+			</div><!-- container end -->
+			<br />
+		<!-- End -->
+			{% else %}
+			<div class = "container text-center">
+				<div class="jumbotron">
+
+					<h2>Want to book a hostel room?</h2>
+					
+				</div>
+				<p>Login with your <b>Google Account</b>.</p>
+			</div>
+			
+			<hr />
+			<div class="container">
+				<div class="rows">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						
+
+
+						
+					</div>
+				</div><!--rows div tag -->
+
+			<hr />
+		</div>
+		{% endif %}
+	<!-- javascript -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+    	
+	<!-- End -->
+
+	<!--footer -->
+	<br />
+	<br />
+	<br />
+	<div class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<p class="navbar-text pull-left">Powered By Intellisoftplus</p>
+
+		</div>
+
+	</div>
+	<!-- end -->
+	
+	</body>
+
+</html>

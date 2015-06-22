@@ -1,0 +1,4 @@
+cron:
+- description: check DB contents
+  url: /reqesttimer
+  schedule: every 720 minutes

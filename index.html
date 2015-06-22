@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>ISP Hostel Booking App</title>
+
+		<!-- Load the Style sheet -->
+
+		<!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom CSS -->
+	    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+	    <link type "text/css" rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src = "js/bootstrap.js"></script>
+		<script src = "js/jquery-1.9.1.js"></script>
+		<script src = "js/validate.js" type="text/javascript" ></script>
+
+
+
+	    <link rel="stylesheet" href="css/bootstrap.css"/>
+	    <link rel="stylesheet" href="css/bootstrapValidator.css"/>
+
+	    <!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom CSS -->
+	    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+	    <script type="text/javascript" src="jquery/jquery-1.10.2.min.js"></script>
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
+	
+
+	</head>
+
+	<body>
+
+		<!-- header -->
+		<div class ="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+
+				<a href="#" class="navbar-brand navbar-left" >
+						<img src="images/pwani.jpg" alt="Smiley face" height="30" width="130"></img> &nbsp;
+						 | Hostel Booking System </a>
+
+
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+
+					<ul class = "nav navbar-nav navbar-right"><br />
+
+						
+						<li>	<mark>
+								<a href="{{ url }}"> {{ url_linktext }} </a> 
+								</mark>
+						</li>
+						
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- end --> 	
+		<br />
+		<br />
+		<br />	
+		
+		
+		{% if user %}
+
+		<!-- fixed navigation bar -->
+		 <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                                
+                <li>
+                	<a href="/apply">Apply</a>
+                </li>
+                <hr />
+                <li>
+
+                    <a href="/search_request">Search</a>
+                </li>
+                <hr />
+                
+                <li>
+                    <a href="/help">Help</a>
+                </li>
+                <hr />
+                
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->	
+
+		
+
+
+
+		<div class="rows">
+			<!-- <div class="col-md-1"></div> -->
+			<div class="col-md-1"></div>
+						
+			<div class="col-md-8">
+
+				<br />
+				<p>
+
+					Fill the details below to complete your application.
+				</p>
+				
+				<!-- Idea form -->
+					<form action="/apply" method="post" class="well form-horizontal center-block span8" role="form"
+						ata-bv-message="This value is not valid"
+			1         data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+			            data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+			            data-bv-feedbackicons-validating="glyphicon glyphicon-refresh" >
+
+								<div class="form-group">
+									
+										<label for="shortDescription" class="col-sm-3 control-label">Full Names*</label>
+										<div class="col-sm-6">
+										<input type="text" name="name" id="name" class="form-control"
+										required data-bv-notempty-message="*This field is required and cannot be empty"  />
+									</div>				
+								</div>
+								<div class="form-group">
+									
+										<label for="shortDescription" class="col-sm-3 control-label">Admission Number*</label>
+										<div class="col-sm-6">
+										<input type="text" name="adm_no" id="adm_no" class="form-control"
+									 	required data-bv-notempty-message="*This field is required and cannot be empty" />
+									</div>									
+								</div>
+
+
+							    <div class="form-group" >
+							    	
+							    		<label for="url" class="col-sm-3 control-label">Course*</label>
+							    		<div class="col-sm-6">
+							    		<input type="text" name="course" id="course" class="form-control" placeholder="" 
+							    	 	required data-bv-notempty-message="*This field is required and cannot be empty"/>
+							    	 </div>
+
+							    </div>
+
+							    <div class="form-group" >
+							    	
+							    		<label for="url" class="col-sm-3 control-label" >Semester*</label>
+							    		<div class="col-sm-6">
+							    		<input type="text" name="sem" id="sem" class="form-control" placeholder=""
+							    	 	required data-bv-notempty-message="*This field is required and cannot be empty" />
+							    	</div>
+							    								      	
+							    </div>
+
+
+							    <div class="form-group" >
+							    	
+							    		<label for="url" class="col-sm-3 control-label">Gender*</label>
+							    		<div class="col-sm-6">
+							    		<select name="gender" id="gender" class="form-control">
+											<option> Male </option>
+											<option> Female </option>
+									
+										</select>
+									</div>							      	
+							    </div>
+
+							    <div class="form-group" >
+							    	
+							    		<label for="url" class="col-sm-3 control-label" >Year of study*</label>
+							    		<div class="col-sm-6">
+							    		<input type="text" name="year" id="year" class="form-control" placeholder=""
+							    	 	required data-bv-notempty-message="*This field is required and cannot be empty" />
+							    	 </div>
+							      	
+							    </div>
+
+							   <div class="form-group" >
+							    	
+							    		<label for="url" class="col-sm-3 control-label">Phone Number*</label>
+							    		<div class="col-sm-6">
+							    		<input type="text" name="mobile" id="mobile" class="form-control" placeholder=""
+							    	 	required data-bv-notempty-message="*This field is required and cannot be empty" />
+							    	 </div>
+							    								      	
+							    </div>
+
+							   
+						    	<button class="btn btn-primary" type="submit" >Apply</button>
+						    
+					</form>
+
+											
+						
+
+
+					<br />
+					<br />
+
+
+
+
+					
+
+			</div>
+
+			</div><!-- end of row -->
+
+
+			<br />
+		<!-- End -->
+			{% else %}
+
+			<br />		
+	
+		
+				
+
+						<div class="container">
+							<div class="jumbotron">
+								 
+
+								<p>
+									Welcome to the Pwani University Hostel Booking System. <a href="{{ url }}"> {{ url_linktext }}</a> in here using your Pwani University email address i.e musa@student.pac.ac.ke to begin the process of applying for a hostel.
+
+
+
+								</p>
+								</div>
+								
+
+							<div class="rows">
+								<div class="col-md-4"></div>
+								<div class="col-md-5">
+
+
+								<!--	<p><a href="{{ url }}"> {{ url_linktext }} </a> <mark>with your school email i.e musa@students.pac.ac.ke</mark></p> -->
+
+									<br />
+
+									<p>
+										Don't have an email account? <a href="http://www.google.com"> Get one here </a> 
+
+
+									</p>
+								</div>
+							</div>
+						
+					
+		{% endif %}
+	<!-- javascript -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+    	
+	<!-- End -->
+
+	<!--footer -->
+	<br />
+	<br />
+	<br />
+	<div class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<p class="navbar-text pull-right">Powered By <img src="https://lh5.googleusercontent.com/-AEBsZLrSc38/UUgznsFOOLI/AAAAAAAAAJ8/tBfNuGm6w-M/s912/intellisoftplus_logo-final.png" width="100" height="20"></p>
+
+		</div>
+
+	</div>
+	<!-- end -->
+	
+	</body>
+
+</html>

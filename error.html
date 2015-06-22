@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Search </title>
+	<!-- Load the Style sheet -->
+
+		<!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom CSS -->
+	    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+	    <link type "text/css" rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src = "js/bootstrap.js"></script>
+		<script src = "js/jquery-1.9.1.js"></script>
+		<script src = "js/validate.js" type="text/javascript" ></script>
+
+
+
+	    <link rel="stylesheet" href="css/bootstrap.css"/>
+	    <link rel="stylesheet" href="css/bootstrapValidator.css"/>
+
+	    <!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom CSS -->
+	    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+	    <script type="text/javascript" src="jquery/jquery-1.10.2.min.js"></script>
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
+	
+
+</head>
+<body>
+	
+		<!-- header -->
+		<div class ="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+
+				<a href="#" class="navbar-brand navbar-left" >
+						<img src="images/pwani.jpg" alt="Smiley face" height="30" width="130"></img> &nbsp;
+						 | Hostel Booking System </a>
+
+
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+
+					<ul class = "nav navbar-nav navbar-right"><br />
+
+						
+						<li><mark>	
+								Welcome {{user.nickname}} <a href="{{ url }}"> {{ url_linktext }} </a>
+							</mark>
+						</li>
+						
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- end --> 	
+		<br />
+		<br />
+		<br />	
+		
+		
+	
+
+		<!-- fixed navigation bar -->
+		 <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                                
+                <li>
+                    <a href="/apply">Apply</a>
+                </li>
+                <hr />
+                <li>
+                    <a href="/search_request">Search</a>
+                </li>
+                <hr />
+                
+                <li>
+                    <a href="/help">Help</a>
+                </li>
+                <hr />
+                
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->	
+	<br /> 
+
+
+
+	<div class="rows">	
+		<div class="col-md-1"></div>
+
+				<div class="col-md-8">
+					{% for n in m %}
+
+					<p> Dear {{user.nickname }}, your request status is: {{n.r_status}} , Reference Code {{n.r_code}}. Kindly check your email for futher details.
+						
+					{% endfor %}
+						 
+				</div>
+			</div>
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<p class="navbar-text pull-right">Powered By: <img src="https://lh5.googleusercontent.com/-AEBsZLrSc38/UUgznsFOOLI/AAAAAAAAAJ8/tBfNuGm6w-M/s912/intellisoftplus_logo-final.png" width="100" height="20"></p>
+
+		</div>
+
+	</div>
+	<!-- end -->
+</body>
+
+</html>
